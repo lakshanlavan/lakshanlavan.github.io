@@ -33,10 +33,10 @@ jobs:
         run: npm ci
 
       - name: Build
-        # Pages serves this repository from /lakshan-l/, so the bundle and every
-        # public-asset URL are built against that base.
+        # Pages serves this repository from /lakshan.github.io/, so the bundle
+        # and every public-asset URL are built against that base.
         env:
-          VITE_BASE: /lakshan-l/
+          VITE_BASE: /lakshan.github.io/
         run: npm run build
 
       - name: Add SPA fallback

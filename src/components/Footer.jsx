@@ -7,7 +7,8 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-meta">
           <p className="footer-name">{profile.name}</p>
-          <p>© {new Date().getFullYear()} · {profile.affiliation}</p>
+          <p>© 2026 Lakshan L. All rights reserved.</p>
+          <p>{profile.affiliation}</p>
         </div>
 
         <SocialIcons variant="social-icons--footer" />
