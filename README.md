@@ -4,7 +4,7 @@ Personal portfolio showcasing engineering, embedded systems, AI, robotics, IoT
 and research projects, from autonomous crop-field navigation and edge-AI
 computer vision to custom PCB and controller design.
 
-🌐 **Live Website:** https://lakshanlavan.github.io/lakshan.github.io/
+🌐 **Live Website:** https://lakshanlavan.github.io/
 
 ## About
 
@@ -28,8 +28,8 @@ npm run build    # production build into dist/
 npm run preview  # serve the production build locally
 ```
 
-The production deployment builds with a repository sub-path base; local
-development and preview continue to serve from `/`.
+The site is published as a GitHub user site, so production and local
+development both serve from `/`.
 
 ## Copyright
 

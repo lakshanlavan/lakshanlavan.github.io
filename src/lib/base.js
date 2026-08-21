@@ -1,9 +1,8 @@
 /* Public-asset base URL.
  *
- * Locally the site is served from "/", but GitHub Pages serves it from the
- * repository sub-path ("/lakshan.github.io/"). Vite exposes whichever base the build
- * was configured with; stripping the trailing slash lets asset paths stay
- * written as "/assets/..." and simply gain the prefix when there is one.
- * Local dev and preview resolve BASE to "" so nothing changes there.
+ * The site is served from the root of lakshanlavan.github.io, so this resolves
+ * to "" and asset paths stay exactly as they are written ("/assets/..."). It is
+ * derived from Vite's configured base rather than hard-coded, so a sub-path
+ * deployment would prefix every asset automatically without touching the data.
  */
 export const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
