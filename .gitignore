@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.vite/
+
+# Local tooling settings (not part of the website)
+.claude/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Raw production footage — source material for the site's media, not served by it
+media-source/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS cruft
+.DS_Store
+Thumbs.db
