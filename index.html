@@ -25,6 +25,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Cookieless analytics. This config block is synchronous and must stay
+         ahead of the async count.js: count.js starts with
+         `window.goatcounter = window.goatcounter || {}`, so it adopts the
+         callback below rather than replacing it. count.js then counts the first
+         page view itself, once it has actually loaded; src/App.jsx reports only
+         the navigations that follow. -->
+    <script>
+      window.goatcounter = {
+        /* count.js reads location.pathname, which is always "/" here because
+           the app routes on the fragment. Report the hash route instead, with
+           no leading "#", so pages appear as /projects, /research, ... */
+        path: function () {
+          var h = location.hash
+          return h.indexOf('#/') === 0 ? (h.slice(1).split('?')[0] || '/') : '/'
+        },
+      }
+    </script>
+    <script data-goatcounter="https://lakshanlavan.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     <div id="root"></div>
